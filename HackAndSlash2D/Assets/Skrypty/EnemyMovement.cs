@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	public GameObject gracz;
-	public float reachDist = 0.1f;
-	public float speed; 
+	private GameObject gracz;
+	public float reachDist = 1f;
+	public float speed = 1f; 
 
 	void Start(){
 		gracz = GameObject.FindGameObjectWithTag ("Player");
