@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Skrypty\CamFollow.cs" />
      <Compile Include="Assets\Skrypty\EnemyMovement.cs" />
      <Compile Include="Assets\Skrypty\GameManager.cs" />
      <Compile Include="Assets\Skrypty\PlayerMovement.cs" />
