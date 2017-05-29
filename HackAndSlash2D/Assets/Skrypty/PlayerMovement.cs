@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 	public float moveSpeed;
+	private GameManager gameManagerSkrypt;
 
 	//private Animator anim;
 
 	void Start () {
 		//anim = GetComponent<Animator> ();
+
+		GameObject obiekt = GameObject.Find ("GameManager");
+		gameManagerSkrypt = obiekt.GetComponent<GameManager> ();
 
 		Physics2D.IgnoreCollision (GameObject.FindGameObjectWithTag ("Broń").GetComponent<Collider2D> (), GetComponent<Collider2D> ());
 	}
@@ -24,5 +28,12 @@ public class PlayerMovement : MonoBehaviour {
 
 		/*anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
 		anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));*/
+	}
+
+	void OnTriggerEnter2D (Collider2D other){
+		if (other.gameObject.tag == "Moneta") {
+			gameManagerSkrypt.ilośćMonet++;
+			Destroy (other.gameObject);
+		}
 	}
 }
