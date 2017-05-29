@@ -13,7 +13,9 @@ public class EnemyMovement : MonoBehaviour {
 	}
 
 	void Update(){
-		
+
+		transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
+			
 		float distance = Vector3.Distance (gracz.transform.position, transform.position);
 
 		if (distance > reachDist) {
