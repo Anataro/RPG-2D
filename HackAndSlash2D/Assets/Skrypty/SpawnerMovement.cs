@@ -14,20 +14,17 @@ public class SpawnerMovement : MonoBehaviour {
 	Transform player; 
 
 
-	void Start()
-	{
+	void Start(){
 	}
 
-	void Update()
-	{
+	void Update(){
 		
 		Patrol ();
 
 	}
 
 
-	void Patrol ()
-	{
+	void Patrol (){
 		float distance = Vector3.Distance (path [currentWaypoint].transform.position, transform.position);
 
 		if (!pause) {
@@ -38,9 +35,6 @@ public class SpawnerMovement : MonoBehaviour {
 				StartCoroutine (GuardPause ());
 				currentWaypoint++;
 
-
-
-
 				if (currentWaypoint >= path.Length) {
 
 
@@ -49,15 +43,6 @@ public class SpawnerMovement : MonoBehaviour {
 			}	
 		}
 	}
-
-	void DetectPlayer()
-	{
-
-	}
-
-
-
-
 
 	IEnumerator GuardPause()
 	{
