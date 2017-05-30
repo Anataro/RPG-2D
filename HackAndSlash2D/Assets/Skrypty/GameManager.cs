@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
-		GameObject obiekt = GameObject.Find ("Plaża");
+		GameObject obiekt = GameObject.Find ("Ocean");
 		anim = obiekt.GetComponent<Animator> ();
 		if( anim.GetCurrentAnimatorStateInfo(0).IsName("Ocean"))
 		{
