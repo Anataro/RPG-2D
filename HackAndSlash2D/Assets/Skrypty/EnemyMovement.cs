@@ -10,6 +10,8 @@ public class EnemyMovement : MonoBehaviour {
 
 	void Start(){
 		gracz = GameObject.FindGameObjectWithTag ("Player");
+
+		Physics2D.IgnoreCollision (GameObject.FindGameObjectWithTag ("Ściana").GetComponent<Collider2D> (), GetComponent<Collider2D> ());
 	}
 
 	void Update(){
