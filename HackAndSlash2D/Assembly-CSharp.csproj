@@ -50,6 +50,7 @@
      <Compile Include="Assets\Skrypty\EnemyMovement.cs" />
      <Compile Include="Assets\Skrypty\GameManager.cs" />
      <Compile Include="Assets\Skrypty\PlayerMovement.cs" />
+     <Compile Include="Assets\Skrypty\Potwory.cs" />
      <Compile Include="Assets\Skrypty\Spawn.cs" />
      <Compile Include="Assets\Skrypty\SpawnerMovement.cs" />
      <Compile Include="Assets\Skrypty\Waypoint.cs" />
